@@ -14,10 +14,9 @@ public class RecetteService {
     private RecetteDAO recetteDAO;
 
 
-    public RecetteService(RecetteDAO RecetteDAO) {
+    public RecetteService(RecetteDAO recetteDAO) {
         this.recetteDAO = recetteDAO;
     }
-
 
     public List<Recette> findAll(){
         return recetteDAO.findAll();
