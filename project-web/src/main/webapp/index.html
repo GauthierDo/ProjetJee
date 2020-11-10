@@ -96,6 +96,12 @@
             float: right;
         }
 
+        .modal-description {
+            text-align: justify;
+        }
+        modal-ingredient {
+            text-align: justify;
+        }
 
         .rating > input:checked ~ label, /* show gold star when clicked */
         .rating:not(:checked) > label:hover, /* hover current star */
@@ -129,7 +135,6 @@
         </nav>
     </header>
 
-
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -145,10 +150,12 @@
                         <div class="card text-center " style="width: 20rem; margin-bottom:20px">
                             <img class="card-img-top" ng-src="{{ctrl.selected.image}}" alt="{{ctrl.selected.title}}">
                             <div class="card-body">
-                                <p class="card-text text-secondary"><span class="badge badge-secondary">{{ctrl.selected.language}}</span> - {{ctrl.selected.chef}}</p>
+                                <p class="card-text text-secondary"><span class="badge badge-secondary">{{ctrl.selected.language}}</span> - De {{ctrl.selected.chef}}</p>
                                 <div class="tags">
                                     <span ng-repeat="tag in ctrl.selected.tags|orderBy:'toString()'"><span class="badge badge-info tag">{{tag}}</span> </span>
                                 </div>
+                                <p class="modal-ingredient" id="exampleModalIngredient">{{ctrl.selected.ingredient}}</p>
+                                <p class="modal-description" id="exampleModalDescription">{{ctrl.selected.description}}</p>
                             </div>
                         </div>
                     </div>
@@ -166,14 +173,13 @@
                     </div>
                     <ul class="list-group clearfix">
                         <li ng-repeat="review in ctrl.selected.reviews | orderBy:'-dateOfReview' " class="list-group-item">
-                            <span class="badge badge-success">{{review.score}}</span><small class="text-muted">   {{review.dateOfReview | date:'yyyy-MM-dd HH:mm:ss'}}</small>
+                            <span class="badge badge-success">{{review.score}}</span><small class="text-muted">   {{review.dateOfReview | date:'yyyy-MM-dd HH:mm:ss' }}</small><small class="text-muted">   {{review.comment}}</small>
                             <button type="button" class="close" ng-click="ctrl.deleteReview(review.id)">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </li>
                     </ul>
                 </div>
-
             </div>
         </div>
     </div>

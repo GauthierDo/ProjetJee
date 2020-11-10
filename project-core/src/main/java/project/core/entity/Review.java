@@ -16,6 +16,8 @@ public class Review implements Comparable<Review> {
 
     private Date dateOfReview;
 
+    private String comment;
+
     @ManyToOne
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Recette recette;
@@ -25,6 +27,13 @@ public class Review implements Comparable<Review> {
         return id;
     }
 
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
 
     public int getScore() {
         return score;

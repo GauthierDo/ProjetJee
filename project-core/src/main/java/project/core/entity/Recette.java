@@ -28,6 +28,10 @@ public class Recette implements Comparable<Recette> {
 
     private String image;
 
+    private String description;
+
+    private String ingredient;
+
     @ManyToMany
     @JoinTable(
             name = "recette_tag",
@@ -38,11 +42,21 @@ public class Recette implements Comparable<Recette> {
     @OneToMany(mappedBy = "recette")
     private Set<Review> reviews;
 
+    public String getIngredient() {
+        return ingredient;
+    }
+
+    public void setIngredient(String ingredient) {
+        this.ingredient = ingredient;
+    }
 
     public Long getId() {
         return id;
     }
 
+    public String getDescription() { return description; }
+
+    public void setDescription(String description) { this.description = description; }
 
     public String getTitle() {
         return title;
@@ -95,4 +109,5 @@ public class Recette implements Comparable<Recette> {
     @Override public int compareTo(final Recette o) {
         return title.compareTo(o.title);
     }
+
 }

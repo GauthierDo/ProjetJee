@@ -13,6 +13,10 @@ public class RecetteDTO {
 
     private String image;
 
+    private String description;
+
+    private String ingredient;
+
     private List<String> chefs;
 
     private List<String> tags;
@@ -31,11 +35,24 @@ public class RecetteDTO {
         id = idValue;
     }
 
+    public String getIngredient() {
+        return ingredient;
+    }
 
+    public void setIngredient(String ingredient) {
+        this.ingredient = ingredient;
+    }
     public String getTitle() {
         return title;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
     public void setTitle(final String titleValue) {
         title = titleValue;

@@ -54,6 +54,8 @@ CREATE TABLE `recette` (
   `image` varchar(255) DEFAULT NULL,
   `language` varchar(255) DEFAULT NULL,
   `title` varchar(255) DEFAULT NULL,
+  `description` TEXT DEFAULT NULL,
+  `ingredient` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -64,7 +66,24 @@ CREATE TABLE `recette` (
 
 LOCK TABLES `recette` WRITE;
 /*!40000 ALTER TABLE `recette` DISABLE KEYS */;
-INSERT INTO `recette` VALUES (165,'https://www.hervecuisine.com/wp-content/uploads/2010/11/recette-crepes.jpg','FR','De bonnes crêpes maison'),(166,'https://assets.afcdn.com/recipe/20161123/34832_w1024h1024c1cx2644cy1872.webp','FR','Gratin de pâtes'),(167,'https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/C31E5540-45D4-4913-B967-AC64E7FD7CF4/Derivates/fba045ac-c208-4dea-a6ba-3b4a3203d7b4.jpg','FR','El famoso chili cone carne'),(168,'https://img.cuisine-etudiant.fr/image/recette/800500/10b0e7ddb5aafb6ee194a80b1e97fa2d5283fdfe-burger-maison.jpg','FR','Burger maison sans complexe'),(169,'https://apprendre-cuisine.com/wp-content/uploads/2017/11/flammenkuche.jpg','FR','Flammekuche'),(170,'https://www.galbani.fr/wp-content/uploads/2017/07/le_veritable_tiramisu_par_il_gusto_italiano_0.png','FR','Tiramisu'),(171,'https://i1.wp.com/www.cookme-shop.com/blog/wp-content/uploads/2017/11/Poulet-tandoori.png?fit=1018%2C549&ssl=1','FR','Poulet tandoori façon indienne'),(172,'https://www.kitchensanctuary.com/wp-content/uploads/2019/09/Chicken-Tikka-Masala-square-FS-51.jpg','FR','Chicken Tikka Masala'),(173,'https://assets.afcdn.com/recipe/20180628/80089_w1024h1024c1cx1944cy2592.jpg','FR','Pâtes carbonara revisitée'),(174,'https://www.papillesetpupilles.fr/wp-content/uploads/2013/08/Spaghetti-Bolognese.jpg','FR','Spaghetti bolognaise'),(175,'https://cac.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Fcac.2F2018.2F09.2F25.2Fbd6f9d41-c9e5-4bcc-9332-9ea612aefadb.2Ejpeg/748x372/quality/80/crop-from/center/riz-cantonais-a-la-sauce-soja.jpeg','FR','Riz cantonais à la sauce soja'),(176,'https://www.hervecuisine.com/wp-content/uploads/2020/05/recette-clafoutis-facile.jpg','FR','Clafoutis aux cerises'),(177,'https://www.marciatack.fr/wp-content/uploads/2015/10/soupe-potiron.jpg','FR','Soupe de potiron'),(178,'https://cac.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Fcac.2F2018.2F09.2F25.2F7e2922bd-1a61-4acc-99f0-90dab19414d7.2Ejpeg/410x230/quality/80/crop-from/center/cookies-facile.jpeg','FR','Cookies'),(179,'https://fac.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Ffac.2F2018.2F07.2F30.2Fad2c4427-b13d-43c8-ad89-ba636ccc5d26.2Ejpeg/850x478/quality/90/crop-from/center/cake-jambon-olives.jpeg','FR','Cake aux olives'),(180,'https://www.atelierdeschefs.com/media/recette-e10043-nouilles-a-l-asiatique-boeuf-et-legumes.jpg','FR','Nouilles au boeuf et aux légumes');
+INSERT INTO `recette` VALUES
+(165,'https://www.hervecuisine.com/wp-content/uploads/2010/11/recette-crepes.jpg','FR','De bonnes crêpes maison','Mettre la farine dans une terrine et former un puit. Y déposer les oeufs entiers, le sucre, l`huile et le beurre. Mélanger délicatement avec un fouet en ajoutant au fur et à mesure le lait. La pâte ainsi obtenue doit avoir une consistance d`un liquide légèrement épais. Parfumer de rhum.Faire chauffer une poêle antiadhésive et la huiler très légèrement. Y verser une louche de pâte, la répartir dans la poêle puis attendre quelle soit cuite d`un côté avant de la retourner. Cuire ainsi toutes les crêpes à feu doux.','300 g de farine, 3 oeufs entiers,
+3 cuillères à soupe de sucre, 2 cuillères à soupe d`huile, 50 g de beurre fondu, 60 cl de lait, 5 cl de rhum'),
+(166,'https://assets.afcdn.com/recipe/20161123/34832_w1024h1024c1cx2644cy1872.webp','FR','Gratin de pâtes',NULL,NULL),
+(167,'https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/C31E5540-45D4-4913-B967-AC64E7FD7CF4/Derivates/fba045ac-c208-4dea-a6ba-3b4a3203d7b4.jpg','FR','El famoso chili cone carne',NULL,NULL),
+(168,'https://img.cuisine-etudiant.fr/image/recette/800500/10b0e7ddb5aafb6ee194a80b1e97fa2d5283fdfe-burger-maison.jpg','FR','Burger maison sans complexe',NULL,NULL),
+(169,'https://apprendre-cuisine.com/wp-content/uploads/2017/11/flammenkuche.jpg','FR','Flammekuche',NULL,NULL),
+(170,'https://www.galbani.fr/wp-content/uploads/2017/07/le_veritable_tiramisu_par_il_gusto_italiano_0.png','FR','Tiramisu',NULL,NULL),
+(171,'https://i1.wp.com/www.cookme-shop.com/blog/wp-content/uploads/2017/11/Poulet-tandoori.png?fit=1018%2C549&ssl=1','FR','Poulet tandoori façon indienne',NULL,NULL),
+(172,'https://www.kitchensanctuary.com/wp-content/uploads/2019/09/Chicken-Tikka-Masala-square-FS-51.jpg','FR','Chicken Tikka Masala',NULL,NULL),
+(173,'https://assets.afcdn.com/recipe/20180628/80089_w1024h1024c1cx1944cy2592.jpg','FR','Pâtes carbonara revisitée',NULL,NULL),
+(174,'https://www.papillesetpupilles.fr/wp-content/uploads/2013/08/Spaghetti-Bolognese.jpg','FR','Spaghetti bolognaise',NULL,NULL),
+(175,'https://cac.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Fcac.2F2018.2F09.2F25.2Fbd6f9d41-c9e5-4bcc-9332-9ea612aefadb.2Ejpeg/748x372/quality/80/crop-from/center/riz-cantonais-a-la-sauce-soja.jpeg','FR','Riz cantonais à la sauce soja',NULL,NULL),
+(176,'https://www.hervecuisine.com/wp-content/uploads/2020/05/recette-clafoutis-facile.jpg','FR','Clafoutis aux cerises',NULL,NULL),
+(177,'https://www.marciatack.fr/wp-content/uploads/2015/10/soupe-potiron.jpg','FR','Soupe de potiron',NULL,NULL),
+(178,'https://cac.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Fcac.2F2018.2F09.2F25.2F7e2922bd-1a61-4acc-99f0-90dab19414d7.2Ejpeg/410x230/quality/80/crop-from/center/cookies-facile.jpeg','FR','Cookies',NULL,NULL),
+(179,'https://fac.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Ffac.2F2018.2F07.2F30.2Fad2c4427-b13d-43c8-ad89-ba636ccc5d26.2Ejpeg/850x478/quality/90/crop-from/center/cake-jambon-olives.jpeg','FR','Cake aux olives',NULL,NULL),
+(180,'https://www.atelierdeschefs.com/media/recette-e10043-nouilles-a-l-asiatique-boeuf-et-legumes.jpg','FR','Nouilles au boeuf et aux légumes',NULL,NULL);
 /*!40000 ALTER TABLE `recette` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -152,6 +171,7 @@ CREATE TABLE `review` (
   `dateOfReview` datetime DEFAULT NULL,
   `score` int(11) NOT NULL,
   `recette_id` bigint(20) DEFAULT NULL,
+  `comment` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FK8d76td2o7d2d8foei85l93b9w` (`recette_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -163,7 +183,34 @@ CREATE TABLE `review` (
 
 LOCK TABLES `review` WRITE;
 /*!40000 ALTER TABLE `review` DISABLE KEYS */;
-INSERT INTO `review` VALUES (245,'2019-10-06 18:38:48',4,169),(256,'2019-10-06 18:57:26',4,NULL),(257,'2019-10-06 19:00:20',4,169),(258,'2019-10-06 19:00:24',5,169),(259,'2019-10-06 19:00:25',2,169),(260,'2019-10-06 19:00:26',3,169),(261,'2019-10-06 19:00:27',1,169),(262,'2019-10-06 19:00:28',2,169),(263,'2019-10-06 19:00:29',1,169),(264,'2019-10-06 19:00:32',1,169),(265,'2019-10-06 19:00:33',1,169),(266,'2019-10-06 19:00:33',1,169),(267,'2019-10-06 19:00:33',1,169),(268,'2019-10-06 19:00:33',1,169),(269,'2019-10-06 19:00:34',1,169),(270,'2019-10-06 19:00:34',1,169),(271,'2019-10-06 19:01:46',1,169),(272,'2019-10-06 19:02:00',1,169),(273,'2019-10-06 19:02:02',2,169),(274,'2019-10-06 19:02:58',1,169),(275,'2019-10-06 19:02:59',2,169),(276,'2019-10-06 19:03:00',3,169),(277,'2019-10-06 19:03:01',4,169),(278,'2019-10-06 19:03:02',5,169),(279,'2019-10-06 19:03:15',4,167),(280,'2019-10-06 19:03:16',5,167),(281,'2019-10-06 19:03:17',3,167),(282,'2019-10-06 19:03:17',2,167);
+INSERT INTO `review` VALUES (245,'2019-10-06 18:38:48',4,169,'Bon'),
+(256,'2019-10-06 18:57:26',4,NULL,'Bon'),
+(257,'2019-10-06 19:00:20',4,169,'Bon'),
+(258,'2019-10-06 19:00:24',5,169,'Très Bon'),
+(259,'2019-10-06 19:00:25',2,169,'Mangeable'),
+(260,'2019-10-06 19:00:26',3,169,'Moyen'),
+(261,'2019-10-06 19:00:27',1,169,'Est-ce que ça se mange ?'),
+(262,'2019-10-06 19:00:28',2,169,'Mangeable'),
+(263,'2019-10-06 19:00:29',1,169,'Est-ce que ça se mange ?'),
+(264,'2019-10-06 19:00:32',1,169,'Est-ce que ça se mange ?'),
+(265,'2019-10-06 19:00:33',1,169,'Est-ce que ça se mange ?'),
+(266,'2019-10-06 19:00:33',1,169,'Est-ce que ça se mange ?'),
+(267,'2019-10-06 19:00:33',1,169,'Est-ce que ça se mange ?'),
+(268,'2019-10-06 19:00:33',1,169,'Est-ce que ça se mange ?'),
+(269,'2019-10-06 19:00:34',1,169,'Est-ce que ça se mange ?'),
+(270,'2019-10-06 19:00:34',1,169,'Est-ce que ça se mange ?'),
+(271,'2019-10-06 19:01:46',1,169,'Est-ce que ça se mange ?'),
+(272,'2019-10-06 19:02:00',1,169,'Est-ce que ça se mange ?'),
+(273,'2019-10-06 19:02:02',2,169,'Mangeable'),
+(274,'2019-10-06 19:02:58',1,169,'Est-ce que ça se mange ?'),
+(275,'2019-10-06 19:02:59',2,169,'Mangeable'),
+(276,'2019-10-06 19:03:00',3,169,'Moyen'),
+(277,'2019-10-06 19:03:01',4,169,'Bon'),
+(278,'2019-10-06 19:03:02',5,169,'Très Bon'),
+(279,'2019-10-06 19:03:15',4,167,'Bon'),
+(280,'2019-10-06 19:03:16',5,167,'Très Bon'),
+(281,'2019-10-06 19:03:17',3,167,'Moyen'),
+(282,'2019-10-06 19:03:17',2,167,'Mangeable');
 /*!40000 ALTER TABLE `review` ENABLE KEYS */;
 UNLOCK TABLES;
 

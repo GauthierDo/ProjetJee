@@ -40,6 +40,8 @@ public class RecetteController implements RestController{
         recetteDTO.setId(recetteId);
         recetteDTO.setTitle(recette.getTitle());
         recetteDTO.setImage(recette.getImage());
+        recetteDTO.setDescription(recette.getDescription());
+        recetteDTO.setIngredient(recette.getIngredient());
         recetteDTO.setLanguage(recette.getLanguage().name());
         recetteDTO.setReviews(recette.getReviews());
         recetteDTO.setChefs(recette.getChefs().stream().map(Chef::getFullname).collect(Collectors.toList()));
