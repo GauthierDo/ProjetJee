@@ -60,6 +60,7 @@
 
         body {
             margin: 20px;
+            background-color: #fff0c1;
         }
 
         h1 {
@@ -101,6 +102,20 @@
         }
         modal-ingredient {
             text-align: justify;
+        }
+        .btn-primary {
+            color: #fff;
+            background-color: #ffc107;
+            border-color: #ffffff;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .list-group-item {
+            color: #8c6900;
+            font-weight: bold;
+            margin-top: 10px;
+            text-align: left;
         }
 
         .rating > input:checked ~ label, /* show gold star when clicked */
@@ -186,7 +201,7 @@
     <ul class="list-group">
         <li ng-repeat="(id,title) in ctrl.recettes " class="list-group-item">
             {{title}}
-            <a class="btn btn-primary float-right" href="#" role="button" data-toggle="modal" data-target="#exampleModal" ng-click="ctrl.loadModal(id)">Afficher le détail</a>
+            <a class="btn btn-primary float-right" href="#" role="button" data-toggle="modal" data-target="#exampleModal" ng-click="ctrl.loadModal(id)">+</a>
         </li>
     </ul>
 
